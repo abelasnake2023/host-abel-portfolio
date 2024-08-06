@@ -1,0 +1,177 @@
+/* Query for all type of device */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* body */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1e242b;
+    display: flex;
+    flex-direction: column;
+}
+/* Body -> classified into 2 */
+/* Aside section */
+body > aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+}
+        /* inside aside */
+        body > aside > img {
+            width: 85%;
+            height: auto;
+        }
+
+/* Main section */
+body > main {
+
+}
+        /* Inside Main */
+        body > main > nav {
+            margin-bottom: 10vh;
+            display: flex;
+            justify-content: center;
+        }
+                /* inside body > main > nav */
+                body > main > nav > ul {
+                    display: flex;
+                }
+                        /* inside body > main > nav > ul */
+                        body > main > nav > ul > li {
+                            display: inline-block;
+                            margin-left: 2vmin;
+                        }
+                                /* inside body > main > nav > ul > li > a */
+                                body > main > nav > ul > li > a {
+                                    color: #f0b4d5;
+                                    text-decoration: none;
+                                }
+                                body > main > nav > ul > li > a:hover {
+                                    font-weight: bold;
+                                    text-decoration: underline;
+                                }
+        body > main > article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+                /* Inside body > main > article */
+                body > main > article > h1 {
+                    font-weight: bold;
+                    font-size: 4vh;
+                }
+                body > main > article > section {
+                    padding: 10%;
+                }
+                        /* inside body > main > article > section */
+                        body > main > article > section > section { /* there are 3 section in this position */
+
+                        }
+                                /* inside > main > article > section > section */
+                                body > main > article > section > section > h2 { /* ,and each the 3 section has h2 element */
+                                        font-weight: bold;
+                                        margin-bottom: 1vh;
+                                }
+                                body > main > article > section > section > p { /* also, each the 3 section has p element */
+                                    margin-bottom: 1vh;
+                                }   
+
+
+@media(min-width: 969px) {
+    /* body */
+    body {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            'bodyMain bodyAside';
+    }
+
+    /* Body -> classified into 2 */
+    /* Aside section */
+    body > aside {
+        grid-area: bodyAside;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+            /* inside aside */
+            body > aside > img {
+                width: 85%;
+                height: auto;
+            }
+
+    /* Main section */
+    body > main {
+        grid-area: bodyMain;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+            /* Inside Main */
+            body > main > nav {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 3vh;
+                margin-bottom: 20vh;
+            }
+                    /* inside body > main > nav */
+                    body > main > nav > ul {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                            /* inside body > main > nav > ul */
+                            body > main > nav > ul > li {
+                                display: inline-block;
+                                margin-right: 2vw;
+                            }
+                                    /* inside body > main > nav > ul > li > a */
+                                    body > main > nav > ul > li > a {
+                                        color: #f0b4d5;
+                                        text-decoration: none;
+                                    }
+                                    body > main > nav > ul > li > a:hover {
+                                        font-weight: bold;
+                                        text-decoration: underline;
+                                    }
+            body > main > article {
+                display: flex;
+                flex-direction: column;
+                color: white;
+            }
+                    /* Inside body > main > article */
+                    body > main > article > h1 {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 7vh;
+                        margin-bottom: 3vh;
+                    }
+                    body > main > article > section {
+                        padding-left: 10%;
+                        padding-right: 10%;
+                    }
+                            /* inside body > main > article > section */
+                            body > main > article > section > section { /* there are 3 section in this position */
+
+                            }
+                                    /* inside > main > article > section > section */
+                                    body > main > article > section > section > h2 { /* ,and each the 3 section has h2 element */
+                                        font-weight: bold;
+                                        font-size: 5vh;
+                                        margin-bottom: 1vh;
+                                    }
+                                    body > main > article > section > section > p { /* also, each the 3 section has p element */
+                                        font-size: 4vh;
+                                        margin-bottom: 2vh;
+                                    }
+}

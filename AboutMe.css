@@ -1,0 +1,258 @@
+/* Query for all type of device */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background-color: #1e242b;
+    display: flex;
+    flex-direction: column;
+}
+/* Backgrounds */
+    /* AsideMyImg Background */
+    aside.AsideMyImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+        margin-bottom: 5vh;
+    }
+            /* inside AsideMyImg */
+            aside.AsideMyImg > img {
+                width: 70%;
+                height: auto;
+            }
+
+    /* MainAboutMe Background */
+    main.MainAboutMe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+              /* Inside MainAboutMe Background */
+              nav.NavChangePage {
+                margin-top: 2vh;
+                margin-left: 1vw;
+                margin-bottom: 9vh;
+            }
+                    /* Inside NavChangePage */
+                    nav.NavChangePage > ul > li {
+                        list-style-type: none;
+                        display: inline;
+                        margin: 10px;
+                    }
+                    nav.NavChangePage > ul > li > a {
+                        color: #a5fdb4;
+                        text-decoration: none;
+                    }
+                    nav.NavChangePage > ul > li > a:hover {
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+            article.ArticleAboutMe {
+                padding: 5vmin;
+                margin-left: 2vw;
+                margin-bottom: 9vh;
+            }
+                    /* Inside ArticleAboutMe */
+                    article.ArticleAboutMe > h1 {
+                        font-size: 7vmin;
+                        color: white;
+                        font-weight: bold;
+                        margin-bottom: 2vh;
+                    }
+                    article.ArticleAboutMe > p {
+                        font-size: 3vmin;
+                        color: white;
+                        line-height: 1.5;
+                        padding-right: 5vw;
+                    }
+            div.DivBtnExp {
+                display: none;
+            }
+            section.SecTechSoln {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 4vh;
+                padding: 5vmin;
+            }
+                    /* inside(2x) and inside SecTechSoln */
+                    .SecTechSolnSub > p {
+                        text-align: justify;
+                        padding-right: 6vw;
+                    }
+                    .SecTechSoln > h2 {
+                        margin-left: 4vw;
+                    }
+            section.SecInnovatechLabs {
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 4vh;
+                align-items: center;
+                padding: 5vmin;
+            }
+                    /* Inside(2x) and inside SecInnovatechLabs */
+                    section.SecInnovatechLabs ul {
+                        color: white;
+                    }
+                    section.SecInnovatechLabs li {
+                        list-style-position: inside;
+                    }
+                    section.SecInnovatechLabs > h2 {
+                        margin-left: 1vw;
+                    }
+/* General */
+h2 {
+    font-size: 4vmin;
+    color: #a5fdb4;
+    font-weight: bold;
+    margin-right: 3vmin;
+}
+h3 {
+    font-size: 3vmin;
+    color: white;
+    font-weight: bold;
+}
+p {
+    color: white;
+}
+
+
+/* Desktop and Laptop Media query */
+@media(min-width: 969px) {
+    /* Body */
+    body {
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            'AsideMyImg MainAboutMe'
+    }
+
+    /* Backgrounds */
+        /* AsideMyImg Background */
+        aside.AsideMyImg {
+            grid-area: AsideMyImg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+                /* inside AsideMyImg */
+                aside.AsideMyImg > img {
+                    width: 70%;
+                    height: auto;
+                }
+
+        /* MainAboutMe Background */
+        main.MainAboutMe {
+            grid-area: MainAboutMe;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+                /* Inside MainAboutMe Background */
+                nav.NavChangePage {
+                    margin-top: 2vh;
+                    margin-left: 1vw;
+                    margin-bottom: 9vh;
+                }
+                        /* Inside NavChangePage */
+                        nav.NavChangePage > ul > li {
+                            list-style-type: none;
+                            display: inline;
+                            margin: 10px;
+                        }
+                        nav.NavChangePage > ul > li > a {
+                            color: #a5fdb4;
+                            text-decoration: none;
+                        }
+                        nav.NavChangePage > ul > li > a:hover {
+                            text-decoration: underline;
+                            font-weight: bold;
+                        }
+                article.ArticleAboutMe {
+                    margin-left: 2vw;
+                    margin-bottom: 9vh;
+                }
+                        /* Inside ArticleAboutMe */
+                        article.ArticleAboutMe > h1 {
+                            font-size: 7vmin;
+                            color: white;
+                            font-weight: bold;
+                            margin-bottom: 2vh;
+                        }
+                        article.ArticleAboutMe > p {
+                            font-size: 3vmin;
+                            color: white;
+                            line-height: 1.5;
+                            padding-right: 5vw;
+                        }
+                div.DivBtnExp {
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-bottom: 9vh;
+                }
+                        /* Inside DivBtnExp */
+                        div.DivBtnExp > .BtnExp {
+                            display: inline;
+                        }
+                        div.DivBtnExp > .BtnExp:hover {
+                            box-shadow: 5px 5px 5px 5px #a5fdb4;
+                        }
+                        div.DivBtnExp > .BtnExp:active {
+                            padding: 1vmin;
+                        }
+                section.SecTechSoln {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 4vh;
+                }
+                        /* inside(2x) and inside SecTechSoln */
+                        .SecTechSolnSub > p {
+                            text-align: justify;
+                            padding-right: 6vw;
+                        }
+                        .SecTechSoln > h2 {
+                            margin-left: 4vw;
+                        }
+                section.SecInnovatechLabs {
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 4vh;
+                }
+                        /* Inside(2x) and inside SecInnovatechLabs */
+                        section.SecInnovatechLabs ul {
+                            color: white;
+                        }
+                        section.SecInnovatechLabs li {
+                            list-style-position: inside;
+                        }
+                        section.SecInnovatechLabs > h2 {
+                            margin-left: 1vw;
+                        }
+    /* General */
+    h2 {
+        font-size: 4vmin;
+        color: #a5fdb4;
+        font-weight: bold;
+        margin-right: 3vmin;
+    }
+    h3 {
+        font-size: 3vmin;
+        color: white;
+        font-weight: bold;
+    }
+    p {
+        color: white;
+    }
+}
